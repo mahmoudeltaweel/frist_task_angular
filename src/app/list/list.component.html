@@ -1,0 +1,16 @@
+<div class="row mt-5" >
+  <div class="col-3 mb-5" *ngFor="let item of heros">
+    <div class="card p-1">
+      <div class="card-image">
+      <img class="w-100" [src]="item.image">
+      </div>
+      <div class="card-body">
+        <h2>{{item.name}}</h2>
+        <p>{{item.power}}</p>
+        <button (click)="deletehero(item.id)" class="btn btn-danger">Delete</button>
+        <button [routerLink]="['/update', item.id]" class="btn btn-info m-2">Edite</button>
+      </div>
+    </div>
+  </div>
+
+</div>
