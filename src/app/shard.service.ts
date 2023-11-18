@@ -22,4 +22,10 @@ export class ShardService {
   deleteHero(id:any){
     return this.http.delete(this.url + `heros/${id}`)
   }
+  getHeroById(id:any){
+    return this.http.get(this.url + `heros/${id}`)
+  }
+  updateHero(id:any , hero:any){
+    return this.http.put(this.url , `heros/${id}` ,hero)
+  }
 }
